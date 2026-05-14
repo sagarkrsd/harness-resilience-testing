@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: sagar-git-backed-infra-custom
+  identifier: sagargitbackedinfracustom
+  orgIdentifier: default
+  projectIdentifier: ChaosDev1
+  environmentRef: sagarqaenv
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: account.acclvlconnector
+    namespace: sagar-esm-test
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
