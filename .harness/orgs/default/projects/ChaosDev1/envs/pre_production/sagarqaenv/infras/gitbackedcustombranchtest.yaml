@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: git-backed-custom-branch-test
+  identifier: gitbackedcustombranchtest
+  orgIdentifier: default
+  projectIdentifier: ChaosDev1
+  environmentRef: sagarqaenv
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: account.acclvlconnector
+    namespace: sagar-esm-test
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
